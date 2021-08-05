@@ -6,7 +6,7 @@ const themes = {
   default: {
     themeName: 'default',
     colors: {
-      primary: "#6EE7B7",
+      primary: 'transparent',
       text: colors.black,
       bodyBg: colors.gray,
       headerBg: "#6EE7B7",
@@ -17,10 +17,10 @@ const themes = {
   dark: {
     themeName: 'dark',
     colors: {
-      primary: "#6EE7B7",
+      primary: "transparent",
       text: colors.white,
       bodyBg: colors.black,
-      headerBg: colors.black,
+      headerBg: "#6EE7B7",
       link: lighten(0.05, colors.blue),
       ...colors,
     },

@@ -4,6 +4,8 @@ import { css } from '@emotion/core'
 import styled from '@emotion/styled'
 import Layout from 'components/Layout'
 import Link from 'components/Link'
+import androidLogo from '../../static/images/android_robot_head.svg'
+import reactLogo from '../../static/images/react.png'
 import { useTheme } from 'components/Theming'
 import Container from 'components/Container'
 import { rhythm } from '../lib/typography'
@@ -26,18 +28,52 @@ const Hero = () => {
           flex-direction: column;
         `}
       >
-        <h1
+        <span
           css={css`
-            color: ${theme.colors.white};
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          @media (max-width: 650px) {
+            flex-wrap: wrap;
+            justify-content: space-around;
+          }
+        `}
+        >
+          <h1
+            css={css`
+            color: ${theme.colors.text};
             position: relative;
             z-index: 5;
             line-height: 1.5;
             margin: 0;
+            @media (max-width: 650px) {
+              max-width: 100%;
+              flex-basis: 100%;
+            }
             max-width: ${rhythm(15)};
           `}
-        >
-          Your blog says the things you want to say.
-        </h1>
+          >
+            Android and Front-End blogs.
+          </h1>
+          <img
+            src={androidLogo}
+            alt='android'
+            css={css`
+            max-width: 100px;
+            margin: 20px;
+            @media (max-width: 650px) {
+              margin: 0;
+            }
+          `}
+          />
+          <img
+            src={reactLogo}
+            alt='react'
+            css={css`
+            max-width: 100px;
+          `}
+          />
+        </span>
       </Container>
       <div
         css={css`

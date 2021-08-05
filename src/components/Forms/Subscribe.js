@@ -109,6 +109,7 @@ class SignUp extends React.Component {
                     input,
                     label {
                       width: 100%;
+                      -webkit-appearance: none;
                     }
                     ${bpMaxSM} {
                       flex-direction: column;

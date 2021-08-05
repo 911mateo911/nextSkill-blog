@@ -5,6 +5,8 @@ import { MDXProvider } from '@mdx-js/react'
 import { lighten } from 'polished'
 import { Global, css } from '@emotion/core'
 import { ThemeProvider, themes } from './Theming'
+import navBg from '../../static/images/wave-haikei.svg'
+import darkNavBg from '../../static/images/wave-haikei-dark.svg'
 import { bpMaxSM } from '../lib/breakpoints'
 import mdxComponents from './mdx'
 import Header from './Header'
@@ -14,10 +16,16 @@ import config from '../../config/website'
 import Footer from '../components/Footer'
 
 const getGlobalStyles = theme => {
+  const bg = theme.themeName === 'dark' ? darkNavBg : navBg
   return css`
     body {
       background: ${theme.colors.bodyBg};
+      background-image: url(${bg});
+      background-repeat: no-repeat;
+      background-position: top;
       color: ${theme.colors.text};
+      max-width: 960px;
+      margin: auto;
     }
     &::selection {
       color: ${theme.colors.white};

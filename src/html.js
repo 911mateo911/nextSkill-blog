@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-
 export default class HTML extends React.Component {
   render() {
     return (
@@ -14,7 +13,7 @@ export default class HTML extends React.Component {
           />
           {this.props.headComponents}
         </head>
-        <body {...this.props.bodyAttributes}>
+        <body {...this.props.bodyAttributes} >
           {this.props.preBodyComponents}
           <noscript>This site runs best with JavaScript enabled.</noscript>
           <div
